@@ -1,29 +1,28 @@
-import { useEffect } from 'react';
-import { Text ,View} from 'react-native';
+import Navigator from './src/navigation';
+import {NavigationContainer} from '@react-navigation/native';
+// import {Provider} from 'react-redux';
+// import {PersistGate} from 'redux-persist/integration/react';
+// import {store, persistor} from './src/business/store';
+import {navigationRef} from './src/utils/navigation.util';
+// import {GestureHandlerRootView} from 'react-native-gesture-handler';
 import BootSplash from 'react-native-bootsplash';
-import { Fonts } from '@constants';
 import React = require('react');
-const App = () => {
-  useEffect(() => {
-    const init = async () => {
-      // …do multiple sync or async tasks
-    };
 
-    init().finally(async () => {
-      await BootSplash.hide({ fade: true });
-      console.log('BootSplash has been hidden successfully');
-    });
-  }, []);
-
-
+const App: React.FC = () => {
   return (
-     <View style={{flex:1}}>
-    <Text style={{fontFamily:Fonts.BOLD}}>BOLD</Text>
-    <Text style={{fontFamily:Fonts.EXTRABOLD}}>EXTRABOLD</Text>
-    <Text style={{fontFamily:Fonts.LIGHT}}>LIGHT</Text>
-    <Text style={{fontFamily:Fonts.REGULAR}}>REGULAR</Text>
-    <Text style={{fontFamily:Fonts.SEMIBOLD}}>SEMIBOLD</Text>
-  </View>
+    // <GestureHandlerRootView style={{flex: 1}}>
+    //   <Provider store={store}>
+    //     <PersistGate loading={null} persistor={persistor}>
+          <NavigationContainer
+            ref={navigationRef}
+            onReady={() => {
+              BootSplash.hide();
+            }}>
+            <Navigator />
+          </NavigationContainer>
+    //     </PersistGate>
+    //   </Provider>
+    // </GestureHandlerRootView>
   );
 };
 
