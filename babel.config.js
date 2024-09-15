@@ -31,8 +31,12 @@ module.exports = {
           '@widgets': './src/widgets',
           '@hooks': './src/hooks',
           '@styles': './src/styles',
+          '@yazonca': './src/yazonca',
         },
       },
     ],
+    ['@babel/plugin-transform-private-methods', {loose: true}],
+    ['@babel/plugin-transform-class-properties', {loose: true}],
+    ['@babel/plugin-transform-private-property-in-object', {loose: true}],
   ],
 };
