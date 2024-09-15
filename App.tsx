@@ -2,7 +2,6 @@ import { useEffect } from 'react';
 import { Text ,View} from 'react-native';
 import BootSplash from 'react-native-bootsplash';
 import { Fonts } from './src/constants';
-
 const App = () => {
   useEffect(() => {
     const init = async () => {

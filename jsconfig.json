@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@actions/*": ["src/actions/*"],
+      "@animations": ["src/animations/index.js"],
+      "@components/*": ["src/components/*"],
+      "@constants": ["src/constants/index.js"],
+      "@locales/*": ["src/locales/*"],
+      "@modals": ["src/modals/index.js"],
+      "@navigation": ["src/navigation/index.js"],
+      "@reducers": ["src/reducers/index.js"],
+      "@screens": ["src/screens/index.js"],
+      "@services": ["src/services/index.js"],
+      "@store": ["src/store/index.js"],
+      "@utils": ["src/utils/index.js"],
+      "@widgets": ["src/widgets/index.js"],
+      "@hooks": ["src/hooks/index.js"],
+      "@styles": ["src/styles/index.js"]
+    }
+  },
+  "exclude": ["node_modules"]
+}
